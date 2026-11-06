@@ -1,0 +1,11 @@
+body { margin:0; font-family:sans-serif; background:#10151f; color:#fff; text-align:center; }
+#app { max-width:480px; margin:0 auto; padding:16px; }
+#money { font-size:44px; font-weight:bold; color:#4ade80; }
+#income { color:#9ca3af; margin-bottom:12px; }
+#tap { width:100%; padding:28px; font-size:24px; border:none; border-radius:16px; background:#22c55e; color:#fff; }
+#tap:active { transform:scale(0.97); }
+#goal { height:10px; background:#273043; border-radius:5px; margin:16px 0; overflow:hidden; }
+#bar { height:100%; width:0; background:#facc15; }
+.item { display:block; width:100%; margin:8px 0; padding:14px; border:none; border-radius:12px; background:#2563eb; color:#fff; font-size:15px; }
+.item:disabled { background:#273043; color:#6b7280; }
+#reset { margin-top:24px; background:none; border:none; color:#6b7280; }
