@@ -7,15 +7,62 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div id="app">
-  <h1>От нуля до миллионера</h1>
-  <div id="money">$0</div>
-  <div id="income">+0 $/сек</div>
-  <button id="tap">Заработать $1</button>
-  <div id="goal"><div id="bar"></div></div>
-  <div id="shop"></div>
-  <button id="reset">Сбросить прогресс</button>
+<div id="layout">
+
+  <aside id="left" class="panel">
+    <div class="panelHead">
+      <div class="seg" id="leftTabs">
+        <button data-t="biz" class="active">💼 Бизнесы</button>
+        <button data-t="ach">🏆 Награды <span id="achCount"></span></button>
+      </div>
+      <button class="close" data-close>✕</button>
+    </div>
+    <div class="body">
+      <div id="biz"></div>
+      <div id="achs" hidden></div>
+      <button id="reset">Сбросить прогресс</button>
+    </div>
+  </aside>
+
+  <main id="center">
+    <div id="hud">
+      <div id="money">$0</div>
+      <div id="chips">
+        <span id="income">+0 $/сек</span>
+        <span id="diamonds">💎 0</span>
+      </div>
+      <div id="goal"><div id="bar"></div></div>
+      <div id="goalTxt">До миллиона: 0%</div>
+    </div>
+
+    <div id="sceneWrap">
+      <svg id="scene" viewBox="0 0 640 380" xmlns="http://www.w3.org/2000/svg"></svg>
+    </div>
+
+    <div id="tapWrap">
+      <button id="tap">Заработать $1</button>
+      <button id="tapUp"></button>
+    </div>
+  </main>
+
+  <aside id="right" class="panel">
+    <div class="panelHead">
+      <div class="seg big" id="tabs"></div>
+      <button class="close" data-close>✕</button>
+    </div>
+    <div id="chipsRow"></div>
+    <div class="body" id="shopBody"></div>
+  </aside>
+
 </div>
+
+<div id="backdrop"></div>
+<nav id="nav">
+  <button data-open="biz"><span>💼</span>Бизнесы</button>
+  <button data-open="shop"><span>🛍</span>Магазин</button>
+  <button data-open="ach"><span>🏆</span>Награды</button>
+</nav>
+<div id="toast"></div>
 <script src="game.js"></script>
 </body>
 </html>
